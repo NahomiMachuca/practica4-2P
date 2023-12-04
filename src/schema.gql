@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cita {
+  id_veterinario: String!
+  id_cliente: String!
+  fecha_programada: String!
+  active: Boolean!
+}
+
+type Query {
+  citas: [Cita!]!
+  cita(id: ID!): Cita!
+}
+
+type Mutation {
+  createCita(createCitaDto: CreateCitaDto!): Cita!
+  updateCita(id: ID!, updateCitaDto: UpdateCitaDto!): Cita!
+  removeCita(id: ID!): Cita!
+  updateAllActiveCita: Cita!
+}
+
+input CreateCitaDto {
+  id_veterinario: String!
+  id_cliente: String!
+  fecha_programada: String!
+}
+
+input UpdateCitaDto {
+  fecha_cita: String!
+}
